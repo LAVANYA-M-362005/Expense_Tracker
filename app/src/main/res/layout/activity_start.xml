@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/expenses_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:text="@string/expense_tracker"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:importantForAccessibility="yes" />
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:text="@string/track_your_expenses_stay_in_control"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_height="45dp"
+            android:layout_width="wrap_content" />
+
+        <Button
+            android:id="@+id/btnLoginStart"
+            android:text="@string/login"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#00675B"
+            android:textColor="@android:color/white"
+            android:layout_width="200dp"
+            android:paddingVertical="12dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSignUpStart"
+            android:text="@string/sign_up"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

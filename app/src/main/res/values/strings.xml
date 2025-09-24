@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="welcome_to_dashboard">Welcome to Dashboard</string>
+    <string name="welcome_user">Welcome, %1$s!</string>
+    <string name="expense_tracker">Expense Tracker</string>
+    <string name="logout">Logout</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="track_your_expenses_manage_your_budget">Track your expenses, manage your budget</string>
+    <string name="track_your_expenses_stay_in_control">Track your expenses, stay in control</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="todo">TODO</string>
+</resources>

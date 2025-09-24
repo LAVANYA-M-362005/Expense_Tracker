@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/expenses_bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="32dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:text="@string/expense_tracker"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/track_your_expenses_manage_your_budget"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:autofillHints="username"
+            android:hint="@string/username"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#E0E0E0"
+            android:background="#7B1FA2"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:autofillHints="password"
+            android:hint="@string/password"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#E0E0E0"
+            android:background="#7B1FA2"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="@string/login"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3700B3" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="@string/sign_up"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00675B" />
+    </LinearLayout>
+</RelativeLayout>
