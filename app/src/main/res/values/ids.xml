@@ -2,4 +2,9 @@
 <resources>
     <item name="btnLogin" type="id" />
     <item name="llRegisterForm" type="id" />
+    <item name="etUsername" type="id" />
+    <item name="etPassword" type="id" />
+    <item name="btnRegister" type="id" />
+    <item name="tvRegister" type="id" />
+
 </resources>

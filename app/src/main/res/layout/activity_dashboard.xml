@@ -1,25 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="?android:attr/windowBackground">
 
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_launcher_foreground"/>
+
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Expense Tracker"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/btnAddExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Expense" />
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History" />
+
+        <!-- Dark/Light Toggle -->
+        <ToggleButton
+            android:id="@+id/toggleMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="Dark"
+            android:textOff="Light" />
+
+        <!-- Logout -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
+        <!-- Profile -->
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+    <!-- Welcome -->
     <TextView
         android:id="@+id/tvWelcome"
-        android:text="@string/welcome_to_dashboard"
-        android:textSize="24sp"
-        android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Welcome User"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
         android:textStyle="bold" />
+
+    <!-- Expense Summary -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvTotalSpent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Spent: ₹0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRemainingBudget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Remaining Budget: ₹0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Charts -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="12dp">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Download Button -->
     <Button
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnDownload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/logout"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp"/>
+        android:text="Download Report"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" />
+
+    <!-- Recent Updates Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Updates"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <!-- RecyclerView for recent expenses -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRecentExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- View More -->
+    <Button
+        android:id="@+id/btnViewMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View More"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp" />
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Expense Tracker | Consultant: ABC Solutions | Contact: support@expensetracker.com"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp" />
 </LinearLayout>

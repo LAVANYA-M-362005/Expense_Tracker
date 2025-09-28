@@ -56,15 +56,25 @@ public class LoginActivity extends AppCompatActivity {
         boolean isValid = dbHelper.checkUserCaseInsensitive(usernameInput, passwordInput);
 
         if (isValid) {
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean("loggedIn", true);
-            editor.putString("username", usernameInput);
-            editor.apply();
+            // CRITICAL STEP 1: Get the user ID from the database
+            int userId = dbHelper.getUserIdByUsername(usernameInput);
 
-            Log.d(TAG, "Login successful: " + usernameInput);
+            if (userId != -1) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("loggedIn", true);
+                editor.putString("username", usernameInput);
+                // CRITICAL STEP 2: Save the user ID for Room operations
+                editor.putInt("userId", userId);
+                editor.apply();
 
-            startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-            finish();
+                Log.d(TAG, "Login successful: " + usernameInput + ", User ID: " + userId);
+
+                startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+                finish();
+            } else {
+                Log.e(TAG, "Login failed: User ID not found for existing user: " + usernameInput);
+                Toast.makeText(this, "Login failed: User ID not found.", Toast.LENGTH_SHORT).show();
+            }
         } else {
             Log.d(TAG, "Login failed for: " + usernameInput);
             Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();

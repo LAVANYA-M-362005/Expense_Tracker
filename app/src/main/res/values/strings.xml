@@ -14,4 +14,16 @@
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="todo">TODO</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_amount">Amount</string>
+    <string name="hint_category">Category</string>
+    <string name="button_save_expense">Save Expense</string>
+    <string name="profile_info_title">User Profile</string>
+    <string name="hint_update_email">Update Email</string>
+    <string name="hint_update_password">Update Password</string>
+    <string name="button_update_profile">Update Profile</string>
+    <string name="button_delete_account">Delete Account</string>
 </resources>

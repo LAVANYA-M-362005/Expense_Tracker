@@ -40,4 +40,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    // The correct way to add Room components in Kotlin DSL
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    // For Room with coroutines support (optional)
+    implementation("androidx.room:room-ktx:$room_version")
 }

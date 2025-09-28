@@ -6,6 +6,17 @@
     <color name="teal_700">#018786</color>
     <color name="teal_500">#03DAC5</color>
 
+    <!-- Additional Colors for Themes -->
+    <color name="gray_800">#424242</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background_light">#FFFFFF</color>
+    <color name="background_dark">#121212</color>
+    <color name="text_light">#212121</color>
+    <color name="text_dark">#FFFFFF</color>
+    <color name="secondary_light">#03DAC5</color>
+    <color name="secondary_dark">#03DAC5</color>
+
     <!-- New Color Palette for Register Page -->
     <color name="background_primary">#212121</color>
     <color name="card_background">#FFFFFF</color>
@@ -13,8 +24,7 @@
     <color name="text_hint_dark">#757575</color>
     <color name="text_button_light">#6200EE</color>
 
-
-    <!-- Existing Colors (retained for other layouts) -->
+    <!-- Existing Colors -->
     <color name="text_primary">#FFFFFF</color>
     <color name="text_hint">#E0E0E0</color>
     <color name="text_button_dark">#000000</color>
